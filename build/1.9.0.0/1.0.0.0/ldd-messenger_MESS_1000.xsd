@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.0.0.0 - Thu Apr 19 09:24:51 PDT 2018 -->
+  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.0.0.0 - Thu Apr 19 11:33:22 PDT 2018 -->
   <!-- Generated from the PDS4 Information Model Version 1.9.0.0 - System Build 8a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -19,7 +19,7 @@
  
   <xs:annotation>
     <xs:documentation>
-This XML schema file has been generated from the PDS4 Information Model.
+The MESSENGER mission dictionary contains classes that describe aspects of the MESSENGER mission and related instruments.
     </xs:documentation>
   </xs:annotation>
  
@@ -136,8 +136,8 @@ This XML schema file has been generated from the PDS4 Information Model.
     </xs:annotation>
     <xs:sequence>
       <xs:element name="mission_phase_name" type="mess:mission_phase_name" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="spacecraft_clock_start_count" type="mess:spacecraft_clock_start_count" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="spacecraft_clock_stop_count" type="mess:spacecraft_clock_stop_count" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="spacecraft_clock_start_count" type="mess:spacecraft_clock_start_count" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="spacecraft_clock_stop_count" type="mess:spacecraft_clock_stop_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="standard_data_product_id" nillable="true" type="mess:standard_data_product_id" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="MDIS" type="mess:MDIS" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
@@ -981,7 +981,7 @@ This XML schema file has been generated from the PDS4 Information Model.
         documents with those data sets. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='[1-9]/[0-9]{9}(:[0-9]{3})?'/>
+    	<xs:pattern value='[1-9]/[0-9]{9}(.[0-9]{3})?'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
@@ -1022,7 +1022,7 @@ This XML schema file has been generated from the PDS4 Information Model.
         documents with those data sets. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='[1-9]/[0-9]{9}(:[0-9]{3})?'/>
+    	<xs:pattern value='[1-9]/[0-9]{9}(.[0-9]{3})?'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>

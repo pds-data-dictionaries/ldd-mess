@@ -7,6 +7,7 @@
        <full_name>PDS3 Migration</full_name>
        <steward_id>ppi</steward_id>
        <namespace_id>mess</namespace_id>
+	   <comment>The MESSENGER mission dictionary contains classes that describe aspects of the MESSENGER mission and related instruments.</comment>
        <last_modification_date_time>2018-04-03T10:11:46.802Z</last_modification_date_time>
 
        <!-- MESSENGER Mission LDD Attributes -->
@@ -149,7 +150,7 @@
              <DD_Value_Domain>
                    <enumeration_flag>false</enumeration_flag>
                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-                   <pattern>[1-9]/[0-9]{9}(:[0-9]{3})?</pattern>
+                   <pattern>[1-9]/[0-9]{9}(.[0-9]{3})?</pattern>
              </DD_Value_Domain>
        </DD_Attribute>    
        <DD_Attribute>
@@ -193,7 +194,7 @@
              <DD_Value_Domain>
                    <enumeration_flag>false</enumeration_flag>
                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-                   <pattern>[1-9]/[0-9]{9}(:[0-9]{3})?</pattern>
+                   <pattern>[1-9]/[0-9]{9}(.[0-9]{3})?</pattern>
              </DD_Value_Domain>
        </DD_Attribute>       
        <DD_Attribute>
@@ -2855,13 +2856,13 @@
              <DD_Association>
                    <local_identifier>mess.spacecraft_clock_start_count</local_identifier>
                    <reference_type>attribute_of</reference_type>
-                   <minimum_occurrences>1</minimum_occurrences>
+                   <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
                    <local_identifier>mess.spacecraft_clock_stop_count</local_identifier>
                    <reference_type>attribute_of</reference_type>
-                   <minimum_occurrences>1</minimum_occurrences>
+                   <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
