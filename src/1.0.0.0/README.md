@@ -122,18 +122,11 @@ Mercury 2 Flyby | 2008-09-22 (2008-266) to  2008-10-20 (2008-294)
 Mercury 3 Cruise | 2008-10-21 (2008-295) to 2009-10-14 (2009-287)
 Mercury 3 Flyby | 2009-09-16 (2009-259) to 2009-10-14 (2009-287)
 Mercury 4 Cruise | 2009-10-15 (2009-288) to 2011-03-03 (2011-062)
-Mercury Orbit | 2011-03-04 (2011-063) to 2012-03-17 (2012-077)
-                                      This phase began at Mercury orbit insertion and continued 
-                                      through the first year of orbital operations.
+Mercury Orbit | 2011-03-04 (2011-063) to 2012-03-17 (2012-077) <br/><code>This phase began at Mercury orbit insertion and continued through the first year of orbital operations. </code>
 Mercury Orbit Year 2 | 2012-03-18 (2012-078) to 2013-03-17 (2013-076)
 Mercury Orbit Year 3 | 2013-03-18 (2013-077) to 2014-03-17 (2014-076)
 Mercury Orbit Year 4 | 2014-03-18 (2014-077) to 2015-03-17 (2015-076)
-Mercury Orbit Year 5 | 2015-03-18 (2014-077) to 2015-04-30 (2015-120)
-                                      The Orbit phase year 5 continued the extended mission through to
-                                      the end of orbital operations. This phase continued the most
-                                      intensive science portion of the mission with full instrument
-                                      utilization through near the end of the period which ended when
-                                      the spacecraft impacted Mercury as expected on 30 April 2015.
+Mercury Orbit Year 5 | 2015-03-18 (2014-077) to 2015-04-30 (2015-120)<br/><code>The Orbit phase year 5 continued the extended mission through to the end of orbital operations. This phase continued the most intensive science portion of the mission with full instrument utilization through near the end of the period which ended when the spacecraft impacted Mercury as expected on 30 April 2015.</code>
 
 
 ### spacecraft_clock_start_count
