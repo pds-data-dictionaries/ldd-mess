@@ -90,7 +90,7 @@ The MESSENGER class is the container for MESSENGER mission-specific metadata ele
 
 Attribute    | Min Occur. | Max Occur.
 ------------ | ---------- | -----------
-[mission_phase_name](#mission_phase_name) | 1 | 1
+[mission_phase_name](#mission_phase_name) | 0 | 1
 [spacecraft_clock_start_count](#spacecraft_clock_start_count) | 0 | 1
 [spacecraft_clock_stop_count](#spacecraft_clock_stop_count) | 0 | 1
 [standard_data_product_id](#standard_data_product_id) | 0 | 1
@@ -122,7 +122,7 @@ Mercury 2 Flyby | 2008-09-22 (2008-266) to  2008-10-20 (2008-294)
 Mercury 3 Cruise | 2008-10-21 (2008-295) to 2009-10-14 (2009-287)
 Mercury 3 Flyby | 2009-09-16 (2009-259) to 2009-10-14 (2009-287)
 Mercury 4 Cruise | 2009-10-15 (2009-288) to 2011-03-03 (2011-062)
-Mercury Orbit | 2011-03-04 (2011-063) to 2012-03-17 (2012-077) <br/><code>This phase began at Mercury orbit insertion and continued through the first year of orbital operations. </code>
+Mercury Orbit | 2011-03-04 (2011-063) to 2012-03-17 (2012-077)<br/><code>This phase began at Mercury orbit insertion and continued through the first year of orbital operations.</code>
 Mercury Orbit Year 2 | 2012-03-18 (2012-078) to 2013-03-17 (2013-076)
 Mercury Orbit Year 3 | 2013-03-18 (2013-077) to 2014-03-17 (2014-076)
 Mercury Orbit Year 4 | 2014-03-18 (2014-077) to 2015-03-17 (2015-076)

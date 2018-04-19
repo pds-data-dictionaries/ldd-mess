@@ -4,7 +4,7 @@
 
        <name>MESSENGER</name>
        <ldd_version_id>1.0.0.0</ldd_version_id>
-       <full_name>PDS3 Migration</full_name>
+       <full_name>J. Mafi</full_name>
        <steward_id>ppi</steward_id>
        <namespace_id>mess</namespace_id>
 	   <comment>The MESSENGER mission dictionary contains classes that describe aspects of the MESSENGER mission and related instruments.</comment>
@@ -81,9 +81,7 @@
                    </DD_Permissible_Value>
                    <DD_Permissible_Value>
                        <value>Mercury Orbit</value>
-                       <value_meaning>2011-03-04 (2011-063) to 2012-03-17 (2012-077)
-                                      This phase began at Mercury orbit insertion and continued 
-                                      through the first year of orbital operations.</value_meaning>
+                       <value_meaning>2011-03-04 (2011-063) to 2012-03-17 (2012-077) This phase began at Mercury orbit insertion and continued through the first year of orbital operations.</value_meaning>
                    </DD_Permissible_Value>
                    <DD_Permissible_Value>
                        <value>Mercury Orbit Year 2</value>
@@ -99,12 +97,7 @@
                    </DD_Permissible_Value>
                    <DD_Permissible_Value>
                        <value>Mercury Orbit Year 5</value>
-                       <value_meaning>2015-03-18 (2014-077) to 2015-04-30 (2015-120)
-                                      The Orbit phase year 5 continued the extended mission through to
-                                      the end of orbital operations. This phase continued the most
-                                      intensive science portion of the mission with full instrument
-                                      utilization through near the end of the period which ended when
-                                      the spacecraft impacted Mercury as expected on 30 April 2015.</value_meaning>
+                       <value_meaning>2015-03-18 (2014-077) to 2015-04-30 (2015-120) The Orbit phase year 5 continued the extended mission through to the end of orbital operations. This phase continued the most intensive science portion of the mission with full instrument utilization through near the end of the period which ended when the spacecraft impacted Mercury as expected on 30 April 2015.</value_meaning>
                    </DD_Permissible_Value>
              </DD_Value_Domain>
        </DD_Attribute>
@@ -2850,7 +2843,7 @@
              <DD_Association>
                    <local_identifier>mess.mission_phase_name</local_identifier>
                    <reference_type>attribute_of</reference_type>
-                   <minimum_occurrences>1</minimum_occurrences>
+                   <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>

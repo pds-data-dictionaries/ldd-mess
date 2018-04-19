@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.0.0.0 - Thu Apr 19 11:33:22 PDT 2018 -->
+  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.0.0.0 - Thu Apr 19 12:08:19 PDT 2018 -->
   <!-- Generated from the PDS4 Information Model Version 1.9.0.0 - System Build 8a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -135,7 +135,7 @@ The MESSENGER mission dictionary contains classes that describe aspects of the M
         MESSENGER mission-specific metadata elements. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="mission_phase_name" type="mess:mission_phase_name" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="mission_phase_name" type="mess:mission_phase_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="spacecraft_clock_start_count" type="mess:spacecraft_clock_start_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="spacecraft_clock_stop_count" type="mess:spacecraft_clock_stop_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="standard_data_product_id" nillable="true" type="mess:standard_data_product_id" minOccurs="0" maxOccurs="1"> </xs:element>
