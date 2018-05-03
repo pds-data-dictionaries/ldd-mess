@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:mess  Version:1.0.0.0 - Thu Apr 19 12:08:19 PDT 2018 -->
+  <!-- PDS4 Schematron for Name Space Id:mess  Version:1.0.0.0 - Thu May 03 13:21:07 PDT 2018 -->
   <!-- Generated from the PDS4 Information Model Version 1.9.0.0 - System Build 8a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -147,6 +147,12 @@
     <sch:rule context="mess:MDIS/mess:wvlratio">
       <sch:assert test=". = ('0', '1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '31', '32', '4', '5', '6', '7', '8', '9')">
         The attribute mess:wvlratio must be equal to one of the following values '0', '1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '31', '32', '4', '5', '6', '7', '8', '9'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="mess:MESSENGER/mess:detector_id">
+      <sch:assert test=". = ('acs', 'hpge', 'microphonics', 'shield')">
+        The attribute mess:detector_id must be equal to one of the following values 'acs', 'hpge', 'microphonics', 'shield'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

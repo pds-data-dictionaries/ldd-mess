@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1400.sch"
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="       http://pds.nasa.gov/pds4/pds/v1        file:////128.97.68.67/work1/pds4/pds/v1/PDS4_PDS_1400.xsd">
+<?xml-model href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1900.sch"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-       <name>MESSENGER</name>
+<Ingest_LDD
+      xmlns="http://pds.nasa.gov/pds4/pds/v1"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation=" http://pds.nasa.gov/pds4/pds/v1  http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1900.xsd">
+
+       <name>MESSENGER Mission Dictionary</name>
        <ldd_version_id>1.0.0.0</ldd_version_id>
        <full_name>J. Mafi</full_name>
        <steward_id>ppi</steward_id>
        <namespace_id>mess</namespace_id>
-	   <comment>The MESSENGER mission dictionary contains classes that describe aspects of the MESSENGER mission and related instruments.</comment>
-       <last_modification_date_time>2018-04-03T10:11:46.802Z</last_modification_date_time>
+	   <comment>
+	     The MESSENGER mission dictionary contains classes that describe aspects 
+	     of the MESSENGER mission and related instruments.
+	   
+	     1.0.0.0 (2018-05-02)
+	      Updated PDS4 model to 1.9.0.0, may want to further update to 1.A.0.0.
+	      Corrections and additions by E. Guinness, Geo Node, as noted in comments
+	      below. Also changed all DD_Assocation clasess to have identifier_reference instead of 
+	      local_identifier so that the ingest file works with 1.9.0.0</comment>
+      
+       <last_modification_date_time>2018-05-02T20:00:00Z</last_modification_date_time>
 
        <!-- MESSENGER Mission LDD Attributes -->
        	
@@ -18,7 +32,8 @@
              <local_identifier>mess.mission_phase_name</local_identifier>
              <nillable_flag>false</nillable_flag>
              <submitter_name>PDS3 Migration</submitter_name>
-             <definition>The mission_phase_name attribute provides the mission-defined name of a mission phase.</definition>
+             <definition>The mission_phase_name attribute provides the mission-defined 
+                   name of a mission phase.</definition>
              <DD_Value_Domain>
                    <enumeration_flag>true</enumeration_flag>
                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -97,7 +112,12 @@
                    </DD_Permissible_Value>
                    <DD_Permissible_Value>
                        <value>Mercury Orbit Year 5</value>
-                       <value_meaning>2015-03-18 (2014-077) to 2015-04-30 (2015-120) The Orbit phase year 5 continued the extended mission through to the end of orbital operations. This phase continued the most intensive science portion of the mission with full instrument utilization through near the end of the period which ended when the spacecraft impacted Mercury as expected on 30 April 2015.</value_meaning>
+                       <value_meaning>2015-03-18 (2014-077) to 2015-04-30 (2015-120).
+                             The Orbit phase year 5 continued the extended mission through 
+                             to the end of orbital operations. This phase continued the most 
+                             intensive science portion of the mission with full instrument 
+                             utilization through near the end of the period which ended when 
+                             the spacecraft impacted Mercury as expected on 30 April 2015.</value_meaning>
                    </DD_Permissible_Value>
              </DD_Value_Domain>
        </DD_Attribute>
@@ -144,6 +164,7 @@
                    <enumeration_flag>false</enumeration_flag>
                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
                    <pattern>[1-9]/[0-9]{9}(.[0-9]{3})?</pattern>
+                   <!-- Some data sets don't have the partition and some have only 8 digits -->
              </DD_Value_Domain>
        </DD_Attribute>    
        <DD_Attribute>
@@ -188,6 +209,7 @@
                    <enumeration_flag>false</enumeration_flag>
                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
                    <pattern>[1-9]/[0-9]{9}(.[0-9]{3})?</pattern>
+                   <!-- See comment above -->
              </DD_Value_Domain>
        </DD_Attribute>       
        <DD_Attribute>
@@ -205,6 +227,66 @@
                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
              </DD_Value_Domain>
        </DD_Attribute>       
+      
+      <!-- software_name [added by Guinness] -->
+       <DD_Attribute>
+              <name>software_name</name>
+              <version_id>1.0</version_id>
+              <local_identifier>mess.software_name</local_identifier>
+              <nillable_flag>false</nillable_flag>
+              <submitter_name>E. Guinness</submitter_name>
+              <definition>The name of the software used to generate the product.</definition>
+              <DD_Value_Domain>
+                   <enumeration_flag>false</enumeration_flag>
+                   <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+              </DD_Value_Domain>
+       </DD_Attribute>  
+ 
+        <!--  software_version_id (this exists in core dictionary) [added by Guinness] -->
+       <DD_Attribute>
+              <name>software_version_id</name>
+              <version_id>1.0</version_id>
+              <local_identifier>mess.software_version_id</local_identifier>
+              <nillable_flag>false</nillable_flag>
+              <submitter_name>E. Guinness</submitter_name>
+              <definition>The version of the software used to generate the product. It 
+                 usually has the form m.n</definition>
+              <DD_Value_Domain>
+                   <enumeration_flag>false</enumeration_flag>
+                   <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+              </DD_Value_Domain>
+       </DD_Attribute>  
+      
+      <!-- detector_id - used by GRS [added by Guinness] -->
+       <DD_Attribute>
+              <name>detector_id</name>
+              <version_id>1.0</version_id>
+              <local_identifier>mess.detector_id</local_identifier>
+              <nillable_flag>false</nillable_flag>
+              <submitter_name>E. Guinness</submitter_name>
+              <definition>The value indicates what detector of the GRS instrument measured
+                 the observation.</definition>
+              <DD_Value_Domain>
+                   <enumeration_flag>true</enumeration_flag>
+                   <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+                   <DD_Permissible_Value>
+                       <value>shield</value>
+                       <value_meaning>Measurement from the GRS shield detector</value_meaning>
+                   </DD_Permissible_Value>
+                   <DD_Permissible_Value>
+                       <value>acs</value>
+                       <value_meaning>Measurement from the GRS anti-coincidence shield.</value_meaning>
+                   </DD_Permissible_Value>
+                   <DD_Permissible_Value>
+                       <value>hpge</value>
+                       <value_meaning>Measurement from the high purity Germanium (HPGe) detector.</value_meaning>
+                   </DD_Permissible_Value>
+                   <DD_Permissible_Value>
+                       <value>microphonics</value>
+                       <value_meaning>Measurement from the microphoncis detector.</value_meaning>
+                   </DD_Permissible_Value>
+              </DD_Value_Domain>
+       </DD_Attribute>  
        
        <!-- MESSENGER MDIS LDD Attributes --> 
        	
@@ -466,8 +548,10 @@
              <DD_Value_Domain>
                    <enumeration_flag>false</enumeration_flag>
                    <value_data_type>ASCII_Integer</value_data_type>
-		           <minimum_value>0</minimum_value>
+	<!-- 	leave out, can't use UNK   (Guinness)
+	                 <minimum_value>0</minimum_value>
 		           <maximum_value>UNK</maximum_value>
+		            -->
             </DD_Value_Domain>
       </DD_Attribute>
        <DD_Attribute>
@@ -851,12 +935,12 @@
                    <value_data_type>ASCII_Integer</value_data_type>
 		           <DD_Permissible_Value>
 			             <value>0</value>
-			             <value_meaning/>
+			             <value_meaning>TBD</value_meaning>
 		          </DD_Permissible_Value>
 		           <DD_Permissible_Value>
 			             <value>1</value>
-			             <value_meaning/>
-		          </DD_Permissible_Value>
+		                   <value_meaning>TBD</value_meaning>
+		           </DD_Permissible_Value>
             </DD_Value_Domain>
       </DD_Attribute>
        <DD_Attribute>
@@ -877,12 +961,12 @@
                    <value_data_type>ASCII_Integer</value_data_type>
 		           <DD_Permissible_Value>
 			             <value>0</value>
-			             <value_meaning/>
-		          </DD_Permissible_Value>
+		                 <value_meaning>TBD</value_meaning>
+		           </DD_Permissible_Value>
 		           <DD_Permissible_Value>
 			             <value>1</value>
-			             <value_meaning/>
-		          </DD_Permissible_Value>
+		                 <value_meaning>TBD</value_meaning>
+		           </DD_Permissible_Value>
             </DD_Value_Domain>
       </DD_Attribute>
        <DD_Attribute>
@@ -935,7 +1019,7 @@
 		           <DD_Permissible_Value>
 			             <value>9</value>
 			             <value_meaning>Priority #9 where zero is highest and 9 is lowest</value_meaning>
-		          </DD_Permissible_Value>       9
+		          </DD_Permissible_Value>
             </DD_Value_Domain>
       </DD_Attribute>
        <DD_Attribute>
@@ -1383,9 +1467,11 @@
              <DD_Value_Domain>
                    <enumeration_flag>false</enumeration_flag>
                    <value_data_type>ASCII_Integer</value_data_type>
-		           <minimum_value>0</minimum_value>
+                   <!-- 	leave out, can't use UNK (Guinness)
+                       <minimum_value>0</minimum_value>
 		           <maximum_value>UNK</maximum_value>
-            </DD_Value_Domain>
+		            -->
+             </DD_Value_Domain>
       </DD_Attribute>
        <DD_Attribute>
              <name>piv_cal</name>
@@ -2395,477 +2481,504 @@
              <version_id>1.0</version_id>
              <local_identifier>mess.mdis</local_identifier>
              <submitter_name>PDS3 Migration</submitter_name>
-             <definition>The MESSENGER MDIS class is the container for MESSENGER MDIS specific metadata elements.
-	  </definition>
-
-	  
+             <definition>The MESSENGER MDIS class is the container for MESSENGER MDIS
+                   specific metadata elements.
+	       </definition>
+	        <!-- Guinness added the next attribute so that this class does not have element definition 
+	         in the schema -->
+	        <element_flag>false</element_flag>
+	        
              <DD_Association>
-                   <local_identifier>mess.mdis.aex_bacb</local_identifier>
+                   <identifier_reference>mess.mdis.aex_bacb</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.aex_maxe</local_identifier>
+                   <identifier_reference>mess.mdis.aex_maxe</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.aex_mine</local_identifier>
+                   <identifier_reference>mess.mdis.aex_mine</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.aex_stat</local_identifier>
+                   <identifier_reference>mess.mdis.aex_stat</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.aex_sthr</local_identifier>
+                   <identifier_reference>mess.mdis.aex_sthr</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.aex_tgtb</local_identifier>
+                   <identifier_reference>mess.mdis.aex_tgtb</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.att_clock_count</local_identifier>
+                   <identifier_reference>mess.mdis.att_clock_count</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.att_flag</local_identifier>
+                   <identifier_reference>mess.mdis.att_flag</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.att_q1</local_identifier>
+                   <identifier_reference>mess.mdis.att_q1</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.att_q2</local_identifier>
+                   <identifier_reference>mess.mdis.att_q2</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.att_q3</local_identifier>
+                   <identifier_reference>mess.mdis.att_q3</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.att_q4</local_identifier>
+                   <identifier_reference>mess.mdis.att_q4</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.cam_t1</local_identifier>
+                   <identifier_reference>mess.mdis.cam_t1</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.cam_t2</local_identifier>
+                   <identifier_reference>mess.mdis.cam_t2</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.ccd_temp</local_identifier>
+                   <identifier_reference>mess.mdis.ccd_temp</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.comp12_8</local_identifier>
+                   <identifier_reference>mess.mdis.comp12_8</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.comp_alg</local_identifier>
+                   <identifier_reference>mess.mdis.comp_alg</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.comp_fst</local_identifier>
+                   <identifier_reference>mess.mdis.comp_fst</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.critopnv</local_identifier>
+                   <identifier_reference>mess.mdis.critopnv</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.dlnkprio</local_identifier>
+                   <identifier_reference>mess.mdis.dlnkprio</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.dpu_id</local_identifier>
+                   <identifier_reference>mess.mdis.dpu_id</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.exp_mode</local_identifier>
+                   <identifier_reference>mess.mdis.exp_mode</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.exposure</local_identifier>
+                   <identifier_reference>mess.mdis.exposure</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.fpu_bin</local_identifier>
+                   <identifier_reference>mess.mdis.fpu_bin</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.fw_goal</local_identifier>
+                   <identifier_reference>mess.mdis.fw_goal</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.fw_pos</local_identifier>
+                   <identifier_reference>mess.mdis.fw_pos</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.fw_pv</local_identifier>
+                   <identifier_reference>mess.mdis.fw_pv</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.fw_read</local_identifier>
+                   <identifier_reference>mess.mdis.fw_read</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.fw_rv</local_identifier>
+                   <identifier_reference>mess.mdis.fw_rv</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.imager</local_identifier>
+                   <identifier_reference>mess.mdis.imager</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.img_id_lsb</local_identifier>
+                   <identifier_reference>mess.mdis.img_id_lsb</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.img_id_msb</local_identifier>
+                   <identifier_reference>mess.mdis.img_id_msb</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.jailbars</local_identifier>
+                   <identifier_reference>mess.mdis.jailbars</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.jb_space</local_identifier>
+                   <identifier_reference>mess.mdis.jb_space</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.jb_x0</local_identifier>
+                   <identifier_reference>mess.mdis.jb_x0</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.jb_x1</local_identifier>
+                   <identifier_reference>mess.mdis.jb_x1</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.latch_up</local_identifier>
+                   <identifier_reference>mess.mdis.latch_up</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.met_exp</local_identifier>
+                   <identifier_reference>mess.mdis.met_exp</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_cal</local_identifier>
+                   <identifier_reference>mess.mdis.piv_cal</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_goal</local_identifier>
+                   <identifier_reference>mess.mdis.piv_goal</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_mpen</local_identifier>
+                   <identifier_reference>mess.mdis.piv_mpen</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_pos</local_identifier>
+                   <identifier_reference>mess.mdis.piv_pos</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_pos_motor</local_identifier>
+                   <identifier_reference>mess.mdis.piv_pos_motor</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_pv</local_identifier>
+                   <identifier_reference>mess.mdis.piv_pv</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_read</local_identifier>
+                   <identifier_reference>mess.mdis.piv_read</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_rv</local_identifier>
+                   <identifier_reference>mess.mdis.piv_rv</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.piv_stat</local_identifier>
+                   <identifier_reference>mess.mdis.piv_stat</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.pixelbin</local_identifier>
+                   <identifier_reference>mess.mdis.pixelbin</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.source</local_identifier>
+                   <identifier_reference>mess.mdis.source</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dx1</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dx1</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dx2</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dx2</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dx3</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dx3</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dx4</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dx4</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dx5</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dx5</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dy1</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dy1</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dy2</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dy2</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dy3</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dy3</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dy4</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dy4</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_dy5</local_identifier>
+                   <identifier_reference>mess.mdis.subf_dy5</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subframe</local_identifier>
+                   <identifier_reference>mess.mdis.subframe</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_x1</local_identifier>
+                   <identifier_reference>mess.mdis.subf_x1</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_x2</local_identifier>
+                   <identifier_reference>mess.mdis.subf_x2</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_x3</local_identifier>
+                   <identifier_reference>mess.mdis.subf_x3</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_x4</local_identifier>
+                   <identifier_reference>mess.mdis.subf_x4</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_x5</local_identifier>
+                   <identifier_reference>mess.mdis.subf_x5</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_y1</local_identifier>
+                   <identifier_reference>mess.mdis.subf_y1</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_y2</local_identifier>
+                   <identifier_reference>mess.mdis.subf_y2</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_y3</local_identifier>
+                   <identifier_reference>mess.mdis.subf_y3</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_y4</local_identifier>
+                   <identifier_reference>mess.mdis.subf_y4</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.subf_y5</local_identifier>
+                   <identifier_reference>mess.mdis.subf_y5</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.time_pls</local_identifier>
+                   <identifier_reference>mess.mdis.time_pls</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.mdis.wvlratio</local_identifier>
+                   <identifier_reference>mess.mdis.wvlratio</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
 	   </DD_Class>
 
-	         <DD_Class>
+	   <DD_Class>
              <name>MESSENGER</name>
              <version_id>1.0</version_id>
              <local_identifier>mess.mdis.MESSENGER</local_identifier>
              <submitter_name>PDS3 Migration</submitter_name>
              <definition>The MESSENGER class is the container for MESSENGER mission-specific metadata elements.
 	  </definition>
-             <DD_Association>
-                   <local_identifier>mess.mission_phase_name</local_identifier>
+	         <!-- Guinness added the next attribute so that this class has element definition 
+	         in the schema -->
+	       <element_flag>true</element_flag>
+	       <DD_Association>
+                   <identifier_reference>mess.mission_phase_name</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.spacecraft_clock_start_count</local_identifier>
+                   <identifier_reference>mess.spacecraft_clock_start_count</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.spacecraft_clock_stop_count</local_identifier>
+                   <identifier_reference>mess.spacecraft_clock_stop_count</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
              <DD_Association>
-                   <local_identifier>mess.standard_data_product_id</local_identifier>
+                   <identifier_reference>mess.standard_data_product_id</identifier_reference>
                    <reference_type>attribute_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>
             </DD_Association>
-			<DD_Association>
-                   <local_identifier>mess.mdis</local_identifier>
+	         
+	       <!-- Guinness added the next three attribute as optional members of this class -->
+             <DD_Association>
+                   <identifier_reference>mess.software_name</identifier_reference>
+                   <reference_type>attribute_of</reference_type>
+                   <minimum_occurrences>0</minimum_occurrences>
+                   <maximum_occurrences>1</maximum_occurrences>
+            </DD_Association>
+             <DD_Association>
+                   <identifier_reference>mess.software_version_id</identifier_reference>
+                   <reference_type>attribute_of</reference_type>
+                   <minimum_occurrences>0</minimum_occurrences>
+                   <maximum_occurrences>1</maximum_occurrences>
+            </DD_Association>
+             <DD_Association>
+                   <identifier_reference>mess.detector_id</identifier_reference>
+                   <reference_type>attribute_of</reference_type>
+                   <minimum_occurrences>0</minimum_occurrences>
+                   <maximum_occurrences>1</maximum_occurrences>
+            </DD_Association>
+
+	         <DD_Association>
+                   <identifier_reference>mess.mdis</identifier_reference>
                    <reference_type>component_of</reference_type>
                    <minimum_occurrences>0</minimum_occurrences>
                    <maximum_occurrences>1</maximum_occurrences>

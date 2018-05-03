@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.0.0.0 - Thu Apr 19 12:08:19 PDT 2018 -->
+  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.0.0.0 - Thu May 03 13:21:07 PDT 2018 -->
   <!-- Generated from the PDS4 Information Model Version 1.9.0.0 - System Build 8a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.9.0.0 - pds: - Common Dictionary - N/A                                  -->
-  <!-- 1.0.0.0 - mess: - MESSENGER - ldd-messenger.xml                           -->
+  <!-- 1.0.0.0 - mess: - MESSENGER Mission Dictionary - ldd-messenger.xml        -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/mess/v1"
@@ -19,10 +19,19 @@
  
   <xs:annotation>
     <xs:documentation>
-The MESSENGER mission dictionary contains classes that describe aspects of the MESSENGER mission and related instruments.
+
+	     The MESSENGER mission dictionary contains classes that describe aspects 
+	     of the MESSENGER mission and related instruments.
+	   
+	     1.0.0.0 (2018-05-02)
+	      Updated PDS4 model to 1.9.0.0, may want to further update to 1.A.0.0.
+	      Corrections and additions by E. Guinness, Geo Node, as noted in comments
+	      below. Also changed all DD_Assocation clasess to have identifier_reference instead of 
+	      local_identifier so that the ingest file works with 1.9.0.0
     </xs:documentation>
   </xs:annotation>
  
+  <xs:element name="MESSENGER" type="mess:MESSENGER"> </xs:element>
 
   <xs:complexType name="MDIS">
     <xs:annotation>
@@ -139,10 +148,14 @@ The MESSENGER mission dictionary contains classes that describe aspects of the M
       <xs:element name="spacecraft_clock_start_count" type="mess:spacecraft_clock_start_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="spacecraft_clock_stop_count" type="mess:spacecraft_clock_stop_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="standard_data_product_id" nillable="true" type="mess:standard_data_product_id" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="software_name" type="mess:software_name" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="software_version_id" type="mess:software_version_id" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="detector_id" type="mess:detector_id" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="MDIS" type="mess:MDIS" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="mess:mission_phase_name = (' Mercury 4 Cruise', 'Earth Cruise', 'Earth Flyby', 'Launch', 'Mercury 1 Cruise', 'Mercury 1 Flyby', 'Mercury 2 Cruise', 'Mercury 2 Flyby', 'Mercury 3 Cruise', 'Mercury 3 Flyby', 'Mercury Orbit', 'Mercury Orbit Year 2', 'Mercury Orbit Year 3', 'Mercury Orbit Year 4', 'Mercury Orbit Year 5', 'Venus 1 Cruise', 'Venus 1 Flyby', 'Venus 2 Cruise', 'Venus 2 Flyby')"/> -->
+    <!-- <xs:assert test="mess:detector_id = ('acs', 'hpge', 'microphonics', 'shield')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
 
@@ -318,8 +331,8 @@ The MESSENGER mission dictionary contains classes that describe aspects of the M
         was acquired.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="0"/>
-     <xs:maxInclusive value="UNK"/>
+     <xs:minInclusive value="-9223372036854775808"/>
+     <xs:maxInclusive value="9223372036854775807"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -510,6 +523,17 @@ The MESSENGER mission dictionary contains classes that describe aspects of the M
     <xs:restriction base="pds:ASCII_Integer">
      <xs:minInclusive value="-9223372036854775808"/>
      <xs:maxInclusive value="9223372036854775807"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="detector_id">
+    <xs:annotation>
+      <xs:documentation>The value indicates what detector of the GRS
+        instrument measured the observation.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -774,8 +798,8 @@ The MESSENGER mission dictionary contains classes that describe aspects of the M
         completes its exposure.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="0"/>
-     <xs:maxInclusive value="UNK"/>
+     <xs:minInclusive value="-9223372036854775808"/>
+     <xs:maxInclusive value="9223372036854775807"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -932,6 +956,28 @@ The MESSENGER mission dictionary contains classes that describe aspects of the M
     <xs:restriction base="pds:ASCII_Integer">
      <xs:minInclusive value="-9223372036854775808"/>
      <xs:maxInclusive value="9223372036854775807"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="software_name">
+    <xs:annotation>
+      <xs:documentation>The name of the software used to generate the
+        product.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="software_version_id">
+    <xs:annotation>
+      <xs:documentation>The version of the software used to generate the
+        product. It usually has the form m.n</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
 	   </xs:restriction>
   </xs:simpleType>
 

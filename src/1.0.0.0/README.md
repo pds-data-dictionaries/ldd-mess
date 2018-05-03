@@ -1,6 +1,13 @@
-# MESSENGER Local Data Dictionary
+# MESSENGER Mission Dictionary Local Data Dictionary
 
-The MESSENGER mission dictionary contains classes that describe aspects of the MESSENGER mission and related instruments.
+The MESSENGER mission dictionary contains classes that describe aspects 
+	     of the MESSENGER mission and related instruments.
+	   
+	     1.0.0.0 (2018-05-02)
+	      Updated PDS4 model to 1.9.0.0, may want to further update to 1.A.0.0.
+	      Corrections and additions by E. Guinness, Geo Node, as noted in comments
+	      below. Also changed all DD_Assocation clasess to have identifier_reference instead of 
+	      local_identifier so that the ingest file works with 1.9.0.0
 
 Version: 1.0.0.0  
 Steward: ppi
@@ -8,7 +15,8 @@ Steward: ppi
 ## Classes
 
 ### MDIS
-The MESSENGER MDIS class is the container for MESSENGER MDIS specific metadata elements.
+The MESSENGER MDIS class is the container for MESSENGER MDIS
+                   specific metadata elements.
 
 Attribute    | Min Occur. | Max Occur.
 ------------ | ---------- | -----------
@@ -94,12 +102,16 @@ Attribute    | Min Occur. | Max Occur.
 [spacecraft_clock_start_count](#spacecraft_clock_start_count) | 0 | 1
 [spacecraft_clock_stop_count](#spacecraft_clock_stop_count) | 0 | 1
 [standard_data_product_id](#standard_data_product_id) | 0 | 1
+[software_name](#software_name) | 0 | 1
+[software_version_id](#software_version_id) | 0 | 1
+[detector_id](#detector_id) | 0 | 1
 [mdis](#mdis) | 0 | 1
 ## Attributes
 
 
 ### mission_phase_name
-The mission_phase_name attribute provides the mission-defined name of a mission phase.
+The mission_phase_name attribute provides the mission-defined 
+                   name of a mission phase.
 
 Type: ASCII_Short_String_Collapsed  
 Units: undefined  
@@ -122,11 +134,16 @@ Mercury 2 Flyby | 2008-09-22 (2008-266) to  2008-10-20 (2008-294)
 Mercury 3 Cruise | 2008-10-21 (2008-295) to 2009-10-14 (2009-287)
 Mercury 3 Flyby | 2009-09-16 (2009-259) to 2009-10-14 (2009-287)
 Mercury 4 Cruise | 2009-10-15 (2009-288) to 2011-03-03 (2011-062)
-Mercury Orbit | 2011-03-04 (2011-063) to 2012-03-17 (2012-077)<br/><code>This phase began at Mercury orbit insertion and continued through the first year of orbital operations.</code>
+Mercury Orbit | 2011-03-04 (2011-063) to 2012-03-17 (2012-077) This phase began at Mercury orbit insertion and continued through the first year of orbital operations.
 Mercury Orbit Year 2 | 2012-03-18 (2012-078) to 2013-03-17 (2013-076)
 Mercury Orbit Year 3 | 2013-03-18 (2013-077) to 2014-03-17 (2014-076)
 Mercury Orbit Year 4 | 2014-03-18 (2014-077) to 2015-03-17 (2015-076)
-Mercury Orbit Year 5 | 2015-03-18 (2014-077) to 2015-04-30 (2015-120)<br/><code>The Orbit phase year 5 continued the extended mission through to the end of orbital operations. This phase continued the most intensive science portion of the mission with full instrument utilization through near the end of the period which ended when the spacecraft impacted Mercury as expected on 30 April 2015.</code>
+Mercury Orbit Year 5 | 2015-03-18 (2014-077) to 2015-04-30 (2015-120).
+                             The Orbit phase year 5 continued the extended mission through 
+                             to the end of orbital operations. This phase continued the most 
+                             intensive science portion of the mission with full instrument 
+                             utilization through near the end of the period which ended when 
+                             the spacecraft impacted Mercury as expected on 30 April 2015.
 
 
 ### spacecraft_clock_start_count
@@ -217,6 +234,40 @@ The standard_data_product_id keyword is used to identify
 Type: ASCII_Short_String_Collapsed  
 Units: undefined  
 
+
+
+### software_name
+The name of the software used to generate the product.
+
+Type: ASCII_Short_String_Collapsed  
+Units: undefined  
+
+
+
+### software_version_id
+The version of the software used to generate the product. It 
+                 usually has the form m.n
+
+Type: ASCII_Short_String_Collapsed  
+Units: undefined  
+
+
+
+### detector_id
+The value indicates what detector of the GRS instrument measured
+                 the observation.
+
+Type: ASCII_Short_String_Collapsed  
+Units: undefined  
+
+**Permissible Values**
+
+Name                                    | Description
+--------------------------------------- | ----------------------------
+shield | Measurement from the GRS shield detector
+acs | Measurement from the GRS anti-coincidence shield.
+hpge | Measurement from the high purity Germanium (HPGe) detector.
+microphonics | Measurement from the microphoncis detector.
 
 
 ### aex_bacb
@@ -442,7 +493,6 @@ The mission-elapsed-time, or MET, in
 
 Type: ASCII_Integer  
 Units: undefined  
-Maximum Value: UNK  
 
 
 
@@ -758,8 +808,8 @@ Units: undefined
 
 Name                                    | Description
 --------------------------------------- | ----------------------------
-0 | 
-1 | 
+0 | TBD
+1 | TBD
 
 
 ### critopnv
@@ -778,8 +828,8 @@ Units: undefined
 
 Name                                    | Description
 --------------------------------------- | ----------------------------
-0 | 
-1 | 
+0 | TBD
+1 | TBD
 
 
 ### dlnkprio
@@ -1152,7 +1202,6 @@ The mission-elapsed-time, or MET, in
 
 Type: ASCII_Integer  
 Units: undefined  
-Maximum Value: UNK  
 
 
 
