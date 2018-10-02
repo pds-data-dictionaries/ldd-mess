@@ -2,9 +2,10 @@
 
 The MESSENGER mission dictionary contains classes that describe aspects of the MESSENGER mission and related instruments.
 
-## Versions
+## Versions (source)
 
 - [1.0.0.0](src/1.0.0.0)
+- [1.0.1.0](src/1.0.1.0)
 
 ## Builds
 
@@ -14,7 +15,12 @@ The build process insures compatiblity of the LDD with the core information mode
 This LDD has been built for the following versions of the PDS4 information model.
 
 - [1.9.0.0](build/1.9.0.0)
-	- Package: [v1.9.0.0](https://github.com/nasa-pds/ldd-messenger/releases/tag/v1.9.0.0)
+   - [1.0.0.0](src/1.0.0.0)
+      [![Generic badge](https://img.shields.io/badge/download-XSD-green.svg)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.9.0.0/1.0.0.0/PDS4_MESS_1900_1000.xsd)
+      [![Generic badge](https://img.shields.io/badge/download-Schematron-green.svg)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.9.0.0/1.0.0.0/PDS4_MESS_1900_1000.sch)
+   - [1.0.1.0](src/1.0.1.0)
+      [![Generic badge](https://img.shields.io/badge/download-XSD-green.svg)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.9.0.0/1.0.1.0/PDS4_MESS_1900_1010.xsd)
+      [![Generic badge](https://img.shields.io/badge/download-Schematron-green.svg)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.9.0.0/1.0.1.0/PDS4_MESS_1900_1010.sch)
 	
 ## Notes
 
