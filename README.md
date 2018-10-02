@@ -15,12 +15,12 @@ The build process insures compatiblity of the LDD with the core information mode
 This LDD has been built for the following versions of the PDS4 information model.
 
 - [1.9.0.0](build/1.9.0.0)
-   - [1.0.0.0](src/1.0.0.0)
+   - [1.0.0.0](build/1.9.0.0/1.0.0.0)
      (Download: 
       [XMLSchema (XSD)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.9.0.0/1.0.0.0/PDS4_MESS_1900_1000.xsd)
       | [Schematron (SCH)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.9.0.0/1.0.0.0/PDS4_MESS_1900_1000.sch)
       )
-   - [1.0.1.0](src/1.0.1.0)
+   - [1.0.1.0](build/1.9.0.0/1.0.1.0)
      (Download: 
       [XMLSchema (XSD)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.9.0.0/1.0.0.0/PDS4_MESS_1900_1010.xsd)
       | [Schematron (SCH)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.9.0.0/1.0.0.0/PDS4_MESS_1900_1010.sch)
