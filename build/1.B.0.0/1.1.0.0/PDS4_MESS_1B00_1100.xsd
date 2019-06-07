@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.0.2.0 - Fri Jun 07 10:21:53 PDT 2019 -->
+  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.1.0.0 - Fri Jun 07 10:27:34 PDT 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.11.0.0 - pds: - Common Dictionary - N/A                                 -->
-  <!-- 1.0.2.0 - mess: - MESSENGER Mission Dictionary - ldd-messenger.xml        -->
+  <!-- 1.1.0.0 - mess: - MESSENGER Mission Dictionary - ldd-messenger.xml        -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/mission/mess/v1"
@@ -13,7 +13,7 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="1.0.2.0">
+    version="1.1.0.0">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B00.xsd"/>
  

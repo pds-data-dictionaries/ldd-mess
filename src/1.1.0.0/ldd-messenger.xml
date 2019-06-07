@@ -8,7 +8,7 @@
       xsi:schemaLocation=" http://pds.nasa.gov/pds4/pds/v1  http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1900.xsd">
 
        <name>MESSENGER Mission Dictionary</name>
-       <ldd_version_id>1.0.2.0</ldd_version_id>
+       <ldd_version_id>1.1.0.0</ldd_version_id>
        <full_name>J. Mafi</full_name>
        <steward_id>ppi</steward_id>
        <namespace_id>mess</namespace_id>

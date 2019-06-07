@@ -21,7 +21,7 @@ The MESSENGER mission dictionary contains classes that describe aspects
 		 1.1.0.0 (2019-06-07)
 		   T. King: Add observation_id, observation_type, data_quality_id, smear_magnitude, dark_strip_mean, missing_pixel_count, saturated_pixel_count and ec_factor as requested by Paul Geissler.
 
-Version: 1.0.2.0  
+Version: 1.1.0.0  
 Steward: ppi
 
 ## Classes
