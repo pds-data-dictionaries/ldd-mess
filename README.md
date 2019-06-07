@@ -18,7 +18,7 @@ This LDD has been built for the following versions of the PDS4 information model
 - [1.1.0.0](build/1.B.0.0/1.1.0.0)
      (Download: 
       [XMLSchema (XSD)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.B.0.0/1.1.0.0/PDS4_MESS_1B00_1100.xsd)
-      | [Schematron (SCH)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.B.0.0/1.0.0.0/PDS4_MESS_1B00_1100.sch)
+      | [Schematron (SCH)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.B.0.0/1.1.0.0/PDS4_MESS_1B00_1100.sch)
       )
 - [1.0.2.0](build/1.B.0.0/1.0.2.0)
      (Download: 
