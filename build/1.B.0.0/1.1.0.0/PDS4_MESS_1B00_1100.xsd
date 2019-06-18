@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.1.0.0 - Fri Jun 07 10:27:34 PDT 2019 -->
+  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.1.0.0 - Tue Jun 18 06:39:00 PDT 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -20,27 +20,27 @@
   <xs:annotation>
     <xs:documentation>
 
-	     The MESSENGER mission dictionary contains classes that describe aspects 
-	     of the MESSENGER mission and related instruments.
-	   
-	     1.0.0.0 (2018-05-02)
-	      Updated PDS4 model to 1.9.0.0, may want to further update to 1.A.0.0.
-	      Corrections and additions by E. Guinness, Geo Node, as noted in comments
-	      below. Also changed all DD_Assocation clasess to have identifier_reference instead of 
-	      local_identifier so that the ingest file works with 1.9.0.0
-	   
-	     1.0.1.0 (2018-06-22) 
-	      S. Slavney: Added orbit_number element. Removed erroneous leading space from mission 
-	      phase name value "Mercury 4 Cruise".
-	      Build with lddtool -lpMs
-		  
-		 1.0.2.0 (2018-10-29)
-		   T. King: Add ec_factor and make img_id_lsb, img_id_msb, piv_pos_motor and piv_goal nillable as requested by Paul Geissler.
-		   Also made mission_phase_name multiple occurrence.
-	      
-		 1.1.0.0 (2019-06-07)
-		   T. King: Add observation_id, observation_type, data_quality_id, smear_magnitude, dark_strip_mean, missing_pixel_count, saturated_pixel_count and ec_factor as requested by Paul Geissler.
-	   
+		The MESSENGER mission dictionary contains classes that describe aspects 
+		of the MESSENGER mission and related instruments.
+
+		1.0.0.0 (2018-05-02)
+		Updated PDS4 model to 1.9.0.0, may want to further update to 1.A.0.0.
+		Corrections and additions by E. Guinness, Geo Node, as noted in comments
+		below. Also changed all DD_Assocation clasess to have identifier_reference instead of 
+		local_identifier so that the ingest file works with 1.9.0.0
+
+		1.0.1.0 (2018-06-22) 
+		S. Slavney: Added orbit_number element. Removed erroneous leading space from mission 
+		phase name value "Mercury 4 Cruise".
+		Build with lddtool -lpMs
+
+		1.0.2.0 (2018-10-29)
+		T. King: Add ec_factor and make img_id_lsb, img_id_msb, piv_pos_motor and piv_goal nillable as requested by Paul Geissler.
+		Also made mission_phase_name multiple occurrence.
+
+		1.1.0.0 (2019-06-07)
+		T. King: Add observation_id, observation_type, data_quality_id, smear_magnitude, dark_strip_mean, missing_pixel_count, saturated_pixel_count and ec_factor as requested by Paul Geissler.
+	
     </xs:documentation>
   </xs:annotation>
  
@@ -148,7 +148,7 @@
     <!-- <xs:assert test="mess:imager = ('0', '1')"/> -->
     <!-- <xs:assert test="mess:jailbars = ('0', '1')"/> -->
     <!-- <xs:assert test="mess:latch_up = ('0', '1')"/> -->
-    <!-- <xs:assert test="mess:observation_type = ('Monochrome', 'Ridealong NAC')"/> -->
+    <!-- <xs:assert test="mess:observation_type = ('Albedo', 'Co-align Calibration', 'Color', 'Comet', 'Dark Current', 'Dark Polar Craters', 'Eleven Color', 'Emission Phase Function', 'Engineering', 'High Incidence', 'Limb', 'Min Phase Five Color', 'Monochrome', 'NAC WAC Calibration', 'Northern Polar', 'Oblique', 'Photometry', 'Pivot Calibration', 'Ridealong NAC', 'Satellite Search', 'Southern Polar', 'Stereo', 'Targeted', 'Thermal Calibration', 'Three Color', 'Vulcanoid Search')"/> -->
     <!-- <xs:assert test="mess:piv_mpen = ('0', '1')"/> -->
     <!-- <xs:assert test="mess:piv_pv = ('0', '1')"/> -->
     <!-- <xs:assert test="mess:piv_rv = ('0', '1')"/> -->

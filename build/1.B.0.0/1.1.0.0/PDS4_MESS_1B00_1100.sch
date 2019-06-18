@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:mess  Version:1.1.0.0 - Fri Jun 07 10:27:34 PDT 2019 -->
+  <!-- PDS4 Schematron for Name Space Id:mess  Version:1.1.0.0 - Tue Jun 18 06:39:00 PDT 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -97,8 +97,8 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="mess:MDIS/mess:observation_type">
-      <sch:assert test=". = ('Monochrome', 'Ridealong NAC')">
-        The attribute mess:observation_type must be equal to one of the following values 'Monochrome', 'Ridealong NAC'.</sch:assert>
+      <sch:assert test=". = ('Albedo', 'Co-align Calibration', 'Color', 'Comet', 'Dark Current', 'Dark Polar Craters', 'Eleven Color', 'Emission Phase Function', 'Engineering', 'High Incidence', 'Limb', 'Min Phase Five Color', 'Monochrome', 'NAC WAC Calibration', 'Northern Polar', 'Oblique', 'Photometry', 'Pivot Calibration', 'Ridealong NAC', 'Satellite Search', 'Southern Polar', 'Stereo', 'Targeted', 'Thermal Calibration', 'Three Color', 'Vulcanoid Search')">
+        The attribute mess:observation_type must be equal to one of the following values 'Albedo', 'Co-align Calibration', 'Color', 'Comet', 'Dark Current', 'Dark Polar Craters', 'Eleven Color', 'Emission Phase Function', 'Engineering', 'High Incidence', 'Limb', 'Min Phase Five Color', 'Monochrome', 'NAC WAC Calibration', 'Northern Polar', 'Oblique', 'Photometry', 'Pivot Calibration', 'Ridealong NAC', 'Satellite Search', 'Southern Polar', 'Stereo', 'Targeted', 'Thermal Calibration', 'Three Color', 'Vulcanoid Search'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

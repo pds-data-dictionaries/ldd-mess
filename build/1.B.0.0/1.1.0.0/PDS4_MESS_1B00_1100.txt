@@ -2,7 +2,7 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.2.1.5b
-   Time                   Fri Jun 07 10:27:34 PDT 2019
+   Time                   Tue Jun 18 06:39:00 PDT 2019
    Core Schemas           [PDS4_PDS_1B00.xsd]
    Core Schematrons       [PDS4_PDS_1B00.sch]
    Common Model Version   1.11.0.0
@@ -151,27 +151,27 @@ Parsed Input - Header:
    Steward                ppi
    Namespace Id           mess
    Comment                
-	     The MESSENGER mission dictionary contains classes that describe aspects 
-	     of the MESSENGER mission and related instruments.
-	   
-	     1.0.0.0 (2018-05-02)
-	      Updated PDS4 model to 1.9.0.0, may want to further update to 1.A.0.0.
-	      Corrections and additions by E. Guinness, Geo Node, as noted in comments
-	      below. Also changed all DD_Assocation clasess to have identifier_reference instead of 
-	      local_identifier so that the ingest file works with 1.9.0.0
-	   
-	     1.0.1.0 (2018-06-22) 
-	      S. Slavney: Added orbit_number element. Removed erroneous leading space from mission 
-	      phase name value "Mercury 4 Cruise".
-	      Build with lddtool -lpMs
-		  
-		 1.0.2.0 (2018-10-29)
-		   T. King: Add ec_factor and make img_id_lsb, img_id_msb, piv_pos_motor and piv_goal nillable as requested by Paul Geissler.
-		   Also made mission_phase_name multiple occurrence.
-	      
-		 1.1.0.0 (2019-06-07)
-		   T. King: Add observation_id, observation_type, data_quality_id, smear_magnitude, dark_strip_mean, missing_pixel_count, saturated_pixel_count and ec_factor as requested by Paul Geissler.
-	   
+		The MESSENGER mission dictionary contains classes that describe aspects 
+		of the MESSENGER mission and related instruments.
+
+		1.0.0.0 (2018-05-02)
+		Updated PDS4 model to 1.9.0.0, may want to further update to 1.A.0.0.
+		Corrections and additions by E. Guinness, Geo Node, as noted in comments
+		below. Also changed all DD_Assocation clasess to have identifier_reference instead of 
+		local_identifier so that the ingest file works with 1.9.0.0
+
+		1.0.1.0 (2018-06-22) 
+		S. Slavney: Added orbit_number element. Removed erroneous leading space from mission 
+		phase name value "Mercury 4 Cruise".
+		Build with lddtool -lpMs
+
+		1.0.2.0 (2018-10-29)
+		T. King: Add ec_factor and make img_id_lsb, img_id_msb, piv_pos_motor and piv_goal nillable as requested by Paul Geissler.
+		Also made mission_phase_name multiple occurrence.
+
+		1.1.0.0 (2019-06-07)
+		T. King: Add observation_id, observation_type, data_quality_id, smear_magnitude, dark_strip_mean, missing_pixel_count, saturated_pixel_count and ec_factor as requested by Paul Geissler.
+	
    Last Modification Time 2018-06-13T21:04:00Z
    PDS4 Merge Flag        false
 
@@ -566,8 +566,32 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            The observation_type element identifies the general type of an observation.
    permissible value - value meaning
-      Monochrome - Varying tones of only one color.
-      Ridealong NAC - High-resolution Narrow Angle Camera (NAC) imaging
+      Albedo - Either a NAC image or a WAC 750-nm filter image, targeted or part of global mapping during the extended mission, with a goal of near-nadir pointing and low solar incidence angle.
+      Co-align Calibration - Pairs of NAC and WAC clear filter images acquired over the course of the mission to track relative pointing of the cameras and to determine camera focal length and distortion parameters as a function of temperature.
+      Color - Always WAC images, 3- or 8-color targeted, or part of global 8-color mapping during the primary mission with a goal of near-nadir pointing and low solar incidence angle.
+      Comet - Images of Comet ISON and Encke.
+      Dark Current - NAC or WAC 430-nm filter images taken with MDIS stowed.
+      Dark Polar Craters - NAC or clear filter WAC images near or including permanently shadowed polar regions, taken as part of a search for features illuminated indirectly by sunlight crater walls.
+      Eleven Color - Observations made with all eleven spectral filters spanning the range from 395 to 1040 nm to cover wavelengths diagnostic of different potential surface materials.
+      Emission Phase Function - Beginning in Extended Mission 2, 3-color targets using 430-, 750-, and 1000-nm WAC spectral filters at 2 to 5 phase angles were acquired within single orbits or groups of two orbits, to measure spatial differences in photometric properties of targets including pyroclastic vents, hollows, and fresh crater materials.
+      Engineering - Images with no dedicated science purpose.
+      High Incidence - Either a NAC image or a WAC 750-nm filter image, part of global mapping during the extended mission with a goal of near-nadir pointing and solar incidence angle near 80 degrees.
+      Limb - Always a WAC 750-nm filter image, taken in groups from high orbit.
+      Min Phase Five Color - Images of the northern plains region in 5 colors at a variable angle off-nadir, to attain a uniform low phase angle near 30 degrees.
+      Monochrome - Either a NAC image or a WAC 750-nm filter image, targeted or part of global mapping during the primary mission, with a goal of near-nadir pointing and solar incidence angle near 68 degrees.
+      NAC WAC Calibration - 11-color image sets of Mercury acquired to use landmarks in the images to determine differences filter to filter in pointing and geometric distortion.
+      Northern Polar - A WAC 750-nm filter image taken as part of a recurrent series to map permanent shadow near the northpole.
+      Photometry - Orbital color WAC observations that repeatedly cover representative areas at wide variety of incidence, emission, and phase angles, initially using the same 8-color filter set as for the global 8-color map. Images of the same target are taken multiple times, as the planet's rotation varies the incidence angle as the target region moves from the terminator to near the sub-solar longitude. Later in the mission the number of filters was increased to 11 to improve photometric correction of 11-color targeted observations.
+      Pivot Calibration - WAC clear filter star images taken weekly near apoapsis in at least 3 pivot positions, to track long-term drift in pointing due to thermally-driven plastic deformation of spacecraft between MDIS base and star cameras.
+      Oblique - High emission angle images of selected area of Mercury for profile views of high-relief features.
+      Ridealong NAC - NAC image taken at low altitude as part of untargeted high resolution coverage.
+      Satellite Search - WAC clear filter image of part of Mercury's gravitational sphere of influence, taken as part of a search for satellites.
+      Southern Polar - A WAC 750-nm filter image 1st solar day in orbit, or a NAC image 2nd solar day, taken as part of a recurrent series to map permanent shadow near the south pole.
+      Stereo - Either a NAC image or a WAC 750-nm filter image, targeted or part of global mapping during the primary mission as the stereo complement to the global monochrome map, or part of global mapping during the extended mission as the stereo complement to the albedo map.
+      Targeted - NAC high resolution or stereo, NAC images that ride along with MASCS or MLA targets, WAC unbinned 3-color, or WAC 8-color photometric measurements.
+      Three Color - Part of global 3-color mapping in the extended mission with a goal of near-nadir pointing and low solar incidence angle, with less pixel binning and thus higher spatial resolution than the 8-color map.
+      Thermal Calibration - WAC clear filter star images taken every several months over one orbit, in groups with multiple pivot positions, to track thermally-driven elastic deformation of the spacecraft between the MDIS base and star cameras.
+      Vulcanoid Search - WAC clear filter image of space near the ecliptic plane interior to Mercury's orbit, taken as part of a search for vulcanoid asteroids.
 
    name                   piv_cal
    version                1.11
