@@ -3,6 +3,9 @@
 The MESSENGER mission dictionary contains classes that describe aspects 
 		of the MESSENGER mission and related instruments.
 
+		1.0.0.1 (2020-06-29)
+        P. Geissler: allowed dark_strip_mean to be negative for CDRs
+		
 		1.0.0.0 (2018-05-02)
 		Updated PDS4 model to 1.9.0.0, may want to further update to 1.A.0.0.
 		Corrections and additions by E. Guinness, Geo Node, as noted in comments

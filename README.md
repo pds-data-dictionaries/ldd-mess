@@ -17,6 +17,11 @@ The build process insures compatiblity of the LDD with the core information mode
 
 This LDD has been built for the following versions of the PDS4 information model.
 
+- [1.1.0.1](build/1.B.0.0/1.1.0.1)
+     (Download: 
+      [XMLSchema (XSD)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.B.0.0/1.1.0.1/PDS4_MESS_1B00_1101.xsd)
+      | [Schematron (SCH)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.B.0.0/1.1.0.1/PDS4_MESS_1B00_1101.sch)
+      )
 - [1.1.0.0](build/1.B.0.0/1.1.0.0)
      (Download: 
       [XMLSchema (XSD)](https://github.com/nasa-pds/ldd-messenger/raw/master/build/1.B.0.0/1.1.0.0/PDS4_MESS_1B00_1100.xsd)
@@ -44,7 +49,7 @@ This LDD has been built for the following versions of the PDS4 information model
 Each build is generating using the [lddtool](https://pds.nasa.gov/pds4/software/ldd/) specific to a version of the [PDS4 Information Model](https://pds.nasa.gov/pds4/doc/im/). The build command used is:
 
 ```
-lddtool -lpJM ldd-file.xml
+lddtool -lpsnJ ldd-file.xml
 ```
 
 Documentation included in the source (src) directory is generated using the "pds-ldd-doc" tool in the [pds4-tools](https://github.com/nasa-pds/pds4-tools) package.The build command used is:
