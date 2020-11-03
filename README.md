@@ -34,7 +34,7 @@ See the [PDS Data Dictionaries Support page](https://pds-data-dictionaries.githu
 
 ## Notes
 
-Each build is generating using the [lddtool](https://pds.nasa.gov/pds4/software/ldd/) specific to a version of the [PDS4 Information Model](https://pds.nasa.gov/pds4/doc/im/). The build command used is:
+Manual builds are generating using the [lddtool](https://pds.nasa.gov/pds4/software/ldd/) specific to a version of the [PDS4 Information Model](https://pds.nasa.gov/pds4/doc/im/). The build command used is:
 
 ```
 lddtool -lpsnJ ldd-file.xml
