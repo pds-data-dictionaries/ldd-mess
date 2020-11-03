@@ -2,9 +2,18 @@
 
 The MESSENGER mission dictionary contains classes that describe aspects of the MESSENGER mission and related instruments.
 
+# Documentation
+
+User Guide: TBD
+Other Documentation: TBD
+
+# Contribute
+
+Have a bug or feature request? Create one in the [PDS4 Issue Repo](https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose).
+
 ## Versions (source)
 
-- [1.1.0.1](src/)
+- [src](src/)
 
 ## Builds
 
@@ -13,11 +22,15 @@ The build process insures compatiblity of the LDD with the core information mode
 
 This LDD has been built for the following versions of the PDS4 information model.
 
-- [1.1.0.1](build/1.B.0.0/1.1.0.1)
-- [1.1.0.0](build/1.B.0.0/1.1.0.0)
-- [1.0.2.0](build/1.B.0.0/1.0.2.0)
-- [1.0.1.0](build/1.9.0.0/1.0.1.0)
-- [1.0.0.0](build/1.9.0.0/1.0.0.0)
+- [1.1.0.1](build/release/1.B.0.0/1.1.0.1)
+- [1.1.0.0](build/release/1.B.0.0/1.1.0.0)
+- [1.0.2.0](build/release/1.B.0.0/1.0.2.0)
+- [1.0.1.0](build/release/1.9.0.0/1.0.1.0)
+- [1.0.0.0](build/release/1.9.0.0/1.0.0.0)
+
+# Support
+
+See the [PDS Data Dictionaries Support page](https://pds-data-dictionaries.github.io/support/) for more Support information.
 
 ## Notes
 
@@ -26,12 +39,4 @@ Each build is generating using the [lddtool](https://pds.nasa.gov/pds4/software/
 ```
 lddtool -lpsnJ ldd-file.xml
 ```
-
-Documentation included in the source (src) directory is generated using the "pds-ldd-doc" tool in the [pds4-tools](https://github.com/nasa-pds/pds4-tools) package.The build command used is:
-
-```
-pds-ldd-doc ldd-file.xml > README.md
-```
-
-After a build the README.md files are updated (manually) to reflect the content of repository.
 
