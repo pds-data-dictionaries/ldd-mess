@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.11.0.0 - Tue Aug 04 16:26:56 MST 2020 -->
+  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.11.0.0 - Fri Dec 04 17:34:19 MST 2020 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.11.0.0 - pds: - Common Dictionary - N/A                                 -->
-  <!-- 1.11.0.0 - mess: - MESSENGER Mission Dictionary - ldd-messenger.xml       -->
+  <!-- 1.11.0.0 - mess: - MESSENGER Mission Dictionary - PDS4_MESS_IngestLDD.xml -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://pds.nasa.gov/pds4/mess/v1"
-    xmlns:mess="http://pds.nasa.gov/pds4/mess/v1"
+    targetNamespace="http://pds.nasa.gov/pds4/mission/mess/v1"
+    xmlns:mess="http://pds.nasa.gov/pds4/mission/mess/v1"
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
@@ -41,8 +41,12 @@
 		1.1.0.0 (2019-06-07)
 		T. King: Add observation_id, observation_type, data_quality_id, smear_magnitude, dark_strip_mean, missing_pixel_count, saturated_pixel_count and ec_factor as requested by Paul Geissler.
 
-    1.1.0.1 (2020-06-29)
-    P. Geissler: allowed dark_strip_mean to be negative for CDRs
+        1.1.0.1 (2020-06-29)
+        P. Geissler: allowed dark_strip_mean to be negative for CDRs
+          also build and release for PDS IM 1.B.0.0
+
+        1.2.0.0 (2020-11-04)
+        T. Hare add disctionary_type to be compliant with PDS I.M. 1.E.0.0 (14) and above.
 	
     </xs:documentation>
   </xs:annotation>
@@ -1609,7 +1613,7 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "Version": "1.11.0.0" ,
-      "Date": "Tue Aug 04 16:26:56 MST 2020" ,
+      "Date": "Fri Dec 04 17:34:19 MST 2020" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "PropertyMapDictionary": [
       ]

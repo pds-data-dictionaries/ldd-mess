@@ -2,7 +2,7 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.2.1.5b
-   Time                   Tue Aug 04 16:26:56 MST 2020
+   Time                   Fri Dec 04 17:34:19 MST 2020
    Core Schemas           [PDS4_PDS_1B00.xsd]
    Core Schematrons       [PDS4_PDS_1B00.sch]
    Common Model Version   1.11.0.0
@@ -13,11 +13,11 @@ Configuration:
    Document Spec          [DMDocument.pins]
 
 Parameters:
-   Input File             [ldd-messenger.xml]
+   Input File             [PDS4_MESS_IngestLDD.xml]
    PDS Processing         true
    LDD Processing         true
-   Discipline LDD         true
-   Mission LDD            false
+   Discipline LDD         false
+   Mission LDD            true
    Write Attr Elements    false
    Merge with Master      false
 
@@ -173,6 +173,10 @@ Parsed Input - Header:
 
         1.1.0.1 (2020-06-29)
         P. Geissler: allowed dark_strip_mean to be negative for CDRs
+          also build and release for PDS IM 1.B.0.0
+
+        1.2.0.0 (2020-11-04)
+        T. Hare add disctionary_type to be compliant with PDS I.M. 1.E.0.0 (14) and above.
 	
    Last Modification Time 2020-07-14T21:04:00Z
    PDS4 Merge Flag        false
