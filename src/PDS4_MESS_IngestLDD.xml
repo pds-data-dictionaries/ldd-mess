@@ -8,7 +8,7 @@
 		xsi:schemaLocation=" http://pds.nasa.gov/pds4/pds/v1  http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
 
 	<name>MESSENGER Mission Dictionary</name>
-	<ldd_version_id>1.1.0.1</ldd_version_id>
+	<ldd_version_id>1.2.0.0</ldd_version_id>
 	<dictionary_type>Mission</dictionary_type>
 	<full_name>J. Mafi</full_name>
 	<steward_id>ppi</steward_id>
@@ -34,12 +34,13 @@
 
 		1.1.0.0 (2019-06-07)
 		T. King: Add observation_id, observation_type, data_quality_id, smear_magnitude, dark_strip_mean, missing_pixel_count, saturated_pixel_count and ec_factor as requested by Paul Geissler.
-
-        1.1.0.1 (2020-06-29)
-        P. Geissler: allowed dark_strip_mean to be negative for CDRs
-
-        1.2.0.0 (2020-11-04)
-        T. Hare add disctionary_type to be compliant with PDS I.M. 1.E.0.0 (14) and above.
+		
+		1.1.0.1 (2020-06-29)
+		P. Geissler: allowed dark_strip_mean to be negative for CDRs
+		  also build and release for PDS IM 1.B.0.0
+		
+		1.2.0.0 (2020-11-04)
+		T. Hare add disctionary_type to be compliant with PDS I.M. 1.E.0.0 (14) and above.
 	</comment>
 
 	<last_modification_date_time>2020-07-14T21:04:00Z</last_modification_date_time>
