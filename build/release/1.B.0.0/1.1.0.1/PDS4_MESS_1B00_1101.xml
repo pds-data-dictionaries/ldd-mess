@@ -25,13 +25,13 @@
     </Identification_Area>
     <File_Area_XML_Schema>
         <File>
-            <file_name>PDS4_MESS_1B00.xsd</file_name>
+            <file_name>PDS4_MESS_1B00_1101.xsd</file_name>
             <creation_date_time>2020-12-04T16:34:19</creation_date_time>
             <file_size unit="byte">79647</file_size>
             <records>1625</records>
         </File>
         <XML_Schema>
-            <name>PDS4_MESS_1B00.xsd</name>
+            <name>PDS4_MESS_1B00_1101.xsd</name>
             <offset unit="byte">0</offset>
             <parsing_standard_id>XML Schema Version 1.1</parsing_standard_id>
             <description>This is a PDS4 XML Schema file for the declared namespace.</description>
@@ -39,13 +39,13 @@
     </File_Area_XML_Schema>
     <File_Area_XML_Schema>
         <File>
-            <file_name>PDS4_MESS_1B00.sch</file_name>
+            <file_name>PDS4_MESS_1B00_1101.sch</file_name>
             <creation_date_time>2020-12-04T16:34:19</creation_date_time>
             <file_size unit="byte">9575</file_size>
             <records>170</records>
         </File>
         <XML_Schema>
-            <name>PDS4_MESS_1B00.sch</name>
+            <name>PDS4_MESS_1B00_1101.sch</name>
             <offset unit="byte">0</offset>
             <parsing_standard_id>Schematron ISO/IEC 19757-3:2006</parsing_standard_id>
             <description>This is the PDS4 Schematron file for the declared namespace. Schematron provides rule-based validation for XML Schema.</description>
