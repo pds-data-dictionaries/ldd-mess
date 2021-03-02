@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.2.0.0 - Sat Dec 05 00:40:48 UTC 2020 -->
-  <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
+  <!-- PDS4 XML/Schema for Name Space Id:mess  Version:1.2.0.1 - Tue Mar 02 01:31:08 UTC 2021 -->
+  <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.14.0.0 - pds: - Common Dictionary                                       -->
-  <!-- 1.2.0.0 - mess: - MESSENGER Mission Dictionary                            -->
+  <!-- 1.15.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.2.0.1 - mess: - MESSENGER Mission Dictionary                            -->
   <!--   file:/home/runner/work/ldd-mess/ldd-mess/src/PDS4_MESS_IngestLDD.xml    -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -14,9 +14,9 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="1.2.0.0">
+    version="1.2.0.1">
  
-    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
@@ -48,6 +48,10 @@
 		
 		1.2.0.0 (2020-11-04)
 		T. Hare add disctionary_type to be compliant with PDS I.M. 1.E.0.0 (14) and above.
+		
+		1.2.0.1 (2021-03-01)
+		J. Mafi: Modified spacecraft_clock_start_count and _stop_count patterns to allow
+		         count values of from 1-9 characters.
 	
     </xs:documentation>
   </xs:annotation>
@@ -1182,7 +1186,7 @@
         documents with those data sets. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='[1-9]/[0-9]{9}(.[0-9]{3})?'/>
+    	<xs:pattern value='[1-9]/[0-9]{1,9}(.[0-9]{3})?'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
@@ -1223,7 +1227,7 @@
         documents with those data sets. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='[1-9]/[0-9]{9}(.[0-9]{3})?'/>
+    	<xs:pattern value='[1-9]/[0-9]{1,9}(.[0-9]{3})?'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
