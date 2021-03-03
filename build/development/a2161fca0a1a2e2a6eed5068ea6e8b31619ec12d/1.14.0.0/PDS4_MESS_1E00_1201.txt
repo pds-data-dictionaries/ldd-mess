@@ -2,12 +2,12 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.0.0
-   LDD Version Id:        1.2.0.0
+   LDD Version Id:        1.2.0.1
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Sat Dec 05 00:40:48 UTC 2020
+   Time                   Tue Mar 02 01:31:07 UTC 2021
    Common Schema          [PDS4_PDS_1E00.xsd]
    Common Schematron      [PDS4_PDS_1E00.sch]
    IM Version Id:         1.14.0.0
@@ -40,7 +40,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               MESSENGER Mission Dictionary
-   LDD Version            1.2.0.0
+   LDD Version            1.2.0.1
    Full Name              J. Mafi
    Steward                ppi
    Namespace Id           mess
@@ -72,6 +72,10 @@ Parsed Input - Header:
 		
 		1.2.0.0 (2020-11-04)
 		T. Hare add disctionary_type to be compliant with PDS I.M. 1.E.0.0 (14) and above.
+		
+		1.2.0.1 (2021-03-01)
+		J. Mafi: Modified spacecraft_clock_start_count and _stop_count patterns to allow
+		         count values of from 1-9 characters.
 	
    Last Modification Time 2020-07-14T21:04:00Z
    PDS4 Merge Flag        false

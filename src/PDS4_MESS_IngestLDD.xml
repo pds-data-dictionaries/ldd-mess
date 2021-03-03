@@ -8,7 +8,7 @@
 		xsi:schemaLocation=" http://pds.nasa.gov/pds4/pds/v1  http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
 
 	<name>MESSENGER Mission Dictionary</name>
-	<ldd_version_id>1.2.0.0</ldd_version_id>
+	<ldd_version_id>1.2.0.1</ldd_version_id>
 	<dictionary_type>Mission</dictionary_type>
 	<full_name>J. Mafi</full_name>
 	<steward_id>ppi</steward_id>
@@ -41,6 +41,10 @@
 		
 		1.2.0.0 (2020-11-04)
 		T. Hare add disctionary_type to be compliant with PDS I.M. 1.E.0.0 (14) and above.
+		
+		1.2.0.1 (2021-03-01)
+		J. Mafi: Modified spacecraft_clock_start_count and _stop_count patterns to allow
+		         count values of from 1-9 characters.
 	</comment>
 
 	<last_modification_date_time>2020-07-14T21:04:00Z</last_modification_date_time>
@@ -204,7 +208,7 @@
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-			<pattern>[1-9]/[0-9]{9}(.[0-9]{3})?</pattern>
+			<pattern>[1-9]/[0-9]{1,9}(.[0-9]{3})?</pattern>
 			<!-- Some data sets don't have the partition and some have only 8 digits -->
 		</DD_Value_Domain>
 	</DD_Attribute>    
@@ -249,7 +253,7 @@
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-			<pattern>[1-9]/[0-9]{9}(.[0-9]{3})?</pattern>
+			<pattern>[1-9]/[0-9]{1,9}(.[0-9]{3})?</pattern>
 			<!-- See comment above -->
 		</DD_Value_Domain>
 	</DD_Attribute>       
