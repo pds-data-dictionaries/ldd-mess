@@ -1,0 +1,131 @@
+
+>>  INFO The configured IM Versions are:[1G00, 1F00, 1E00, 1D00, 1C00, 1B10, 1B00]
+>>  INFO The provided IM Version 1C00 is valid
+>>  INFO LDDTOOL Version: 13.0.2
+>>  INFO IM Version Id: 1.12.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.0
+>>  INFO Date: Sat Jun 26 19:03:52 UTC 2021
+>>  INFO PARENT_DIR: /tmp/lddtool-13.0.2
+>>  INFO SCRIPT_DIR: /tmp/lddtool-13.0.2/bin
+>>  INFO LIB_DIR: /tmp/lddtool-13.0.2/lib
+>>  WARNING Class omitted from build - Class Identifier:0001_NASA_PDS_1.pds.Schematron_Rule
+>>  WARNING Class omitted from build - Class Identifier:0001_NASA_PDS_1.pds.Schematron_Assert
+
+>>> INFO Init:  - Config.Properties Namespace Id Using:pds
+>>> INFO Init:  - LDD Dictionary_Type is Mission
+>>> INFO Attribute: <orbit_number> - A 'nilable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <standard_data_product_id> - A 'nilable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <mission_phase_name> - The default maximum characters provided by the attribute's data type is being overridden with 255
+>>> INFO Attribute: <software_version_id> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <aex_bacb> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <aex_bacb> - The default maximum value provided by the attribute's data type is being overridden with 4095
+>>> INFO Attribute: <aex_maxe> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <aex_maxe> - The default maximum value provided by the attribute's data type is being overridden with 989
+>>> INFO Attribute: <aex_mine> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <aex_mine> - The default maximum value provided by the attribute's data type is being overridden with 989
+>>> INFO Attribute: <aex_stat> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <aex_stat> - The default maximum value provided by the attribute's data type is being overridden with 4095
+>>> INFO Attribute: <aex_sthr> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <aex_sthr> - The default maximum value provided by the attribute's data type is being overridden with 65535
+>>> INFO Attribute: <aex_tgtb> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <aex_tgtb> - The default maximum value provided by the attribute's data type is being overridden with 4095
+>>> INFO Attribute: <att_flag> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <att_flag> - The default maximum value provided by the attribute's data type is being overridden with 7
+>>> INFO Attribute: <att_q1> - The default minimum value provided by the attribute's data type is being overridden with -1.0
+>>> INFO Attribute: <att_q1> - The default maximum value provided by the attribute's data type is being overridden with 1.0
+>>> INFO Attribute: <att_q2> - The default minimum value provided by the attribute's data type is being overridden with -1.0
+>>> INFO Attribute: <att_q2> - The default maximum value provided by the attribute's data type is being overridden with 1.0
+>>> INFO Attribute: <att_q3> - The default minimum value provided by the attribute's data type is being overridden with -1.0
+>>> INFO Attribute: <att_q3> - The default maximum value provided by the attribute's data type is being overridden with 1.0
+>>> INFO Attribute: <att_q4> - The default minimum value provided by the attribute's data type is being overridden with -1.0
+>>> INFO Attribute: <att_q4> - The default maximum value provided by the attribute's data type is being overridden with 1.0
+>>> INFO Attribute: <cam_t1> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <cam_t1> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <cam_t2> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <cam_t2> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <ccd_temp> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <ccd_temp> - The default maximum value provided by the attribute's data type is being overridden with 4095
+>>> INFO Attribute: <exposure> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <exposure> - The default maximum value provided by the attribute's data type is being overridden with 9990
+>>> INFO Attribute: <fw_goal> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <fw_goal> - The default maximum value provided by the attribute's data type is being overridden with 65535
+>>> INFO Attribute: <fw_pos> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <fw_pos> - The default maximum value provided by the attribute's data type is being overridden with 65535
+>>> INFO Attribute: <fw_read> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <fw_read> - The default maximum value provided by the attribute's data type is being overridden with 65535
+>>> INFO Attribute: <img_id_lsb> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <img_id_lsb> - The default maximum value provided by the attribute's data type is being overridden with 65535
+>>> INFO Attribute: <img_id_msb> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <img_id_msb> - The default maximum value provided by the attribute's data type is being overridden with 255
+>>> INFO Attribute: <jb_space> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <jb_space> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <jb_x0> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <jb_x0> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <jb_x1> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <jb_x1> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <missing_pixel_count> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <piv_cal> - The default minimum value provided by the attribute's data type is being overridden with -32768
+>>> INFO Attribute: <piv_cal> - The default maximum value provided by the attribute's data type is being overridden with 32768
+>>> INFO Attribute: <piv_goal> - The default minimum value provided by the attribute's data type is being overridden with -32768
+>>> INFO Attribute: <piv_goal> - The default maximum value provided by the attribute's data type is being overridden with 32768
+>>> INFO Attribute: <piv_pos> - The default minimum value provided by the attribute's data type is being overridden with -32768
+>>> INFO Attribute: <piv_pos> - The default maximum value provided by the attribute's data type is being overridden with 32768
+>>> INFO Attribute: <piv_pos_motor> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <piv_pos_motor> - The default maximum value provided by the attribute's data type is being overridden with 65535
+>>> INFO Attribute: <piv_read> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <piv_read> - The default maximum value provided by the attribute's data type is being overridden with 65535
+>>> INFO Attribute: <saturated_pixel_count> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <smear_magnitude> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <smear_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <smear_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <subf_dx1> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dx1> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dx2> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dx2> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dx3> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dx3> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dx4> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dx4> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dx5> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dx5> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dy1> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dy1> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dy2> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dy2> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dy3> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dy3> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dy4> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dy4> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_dy5> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_dy5> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <subf_x1> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_x1> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_x2> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_x2> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_x3> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_x3> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_x4> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_x4> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_x5> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_x5> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_y1> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_y1> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_y2> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_y2> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_y3> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_y3> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_y4> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_y4> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> INFO Attribute: <subf_y5> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subf_y5> - The default maximum value provided by the attribute's data type is being overridden with 1023
+>>> WARNING Init:  - Config.Properties Namespace Id Not Found:mess
+>>> WARNING Header:  - New steward has been specified:ppi
+>>> WARNING Header:  - New namespace id has been specified:mess
+
+ -- LDDTool Execution Summary --
+     5 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+>>  INFO Exit(0)
